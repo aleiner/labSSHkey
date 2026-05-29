@@ -55,8 +55,10 @@ systemctl enable rke2-server.service
 
 On Second and Third Node:
 ```bash
+mkdir -p /etc/rancher/rke2/
+
 cat >> /etc/rancher/rke2/config.yaml << EOF
-server: https://10.7.2.12:9345
+server: https://<your-first-node-ip>:9345
 token: K104d27666dcebe13f6994516a9fee04731669182a95a44862afa11a8bd8021208e::server:f40634780a58ac1477c972806abec087
 EOF
 ```
