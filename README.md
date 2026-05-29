@@ -46,7 +46,14 @@ On First Node:
 cat /var/lib/rancher/rke2/server/node-token
 ```
 
-One Second and Third Node:
+On Second and Third Node:
+
+```
+curl -sfL https://get.rke2.io | sh -
+systemctl enable rke2-server.service 
+```
+
+On Second and Third Node:
 ```bash
 cat >> /etc/rancher/rke2/config.yaml << EOF
 server: https://10.7.2.12:9345
