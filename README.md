@@ -47,8 +47,6 @@ cat /var/lib/rancher/rke2/server/node-token
 ```
 
 On Second and Third Node:
-
-On Second and Third Node:
 ```bash
 
 mkdir -p /etc/rancher/rke2/
@@ -59,7 +57,10 @@ token: K104d27666dcebe13f6994516a9fee04731669182a95a44862afa11a8bd8021208e::serv
 EOF
 ```
 
+
+On Second and Third Node:
 ```
 curl -sfL https://get.rke2.io | sh -
 systemctl enable rke2-server.service 
+systemctl start rke2-server.service
 ```
