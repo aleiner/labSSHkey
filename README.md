@@ -14,6 +14,7 @@ systemctl reload NetworkManager
 On First Node:
 
 ```bash
+systemctl disable --now firewalld
 curl -sfL https://get.rke2.io | sh -
 systemctl enable rke2-server.service 
 systemctl start rke2-server.service
@@ -60,6 +61,7 @@ EOF
 
 On Second and Third Node:
 ```
+systemctl disable --now firewalld
 curl -sfL https://get.rke2.io | sh -
 systemctl enable rke2-server.service 
 systemctl start rke2-server.service
